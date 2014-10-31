@@ -1,0 +1,93 @@
+<div class="main-container">
+  <header class="title">
+      <div class="background-image-holder parallax-background">
+        <img class="background-image" src="{{ transform src="{{ main_img }}"width="1920" height="882"  action="smart" alt="{{ title }}" quality="100" }} " />
+
+      </div>
+
+      <div class="container align-bottom">
+        <div class="row">
+          <div class="col-xs-12">
+            <span class="sub alt-font text-white">
+                  {{ if date }}
+                  <p class="article__date"><time datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time></p>
+                  {{ endif }}
+                </span>
+            <h1 class="text-white">{{ title }}</h1>
+            <span class="sub alt-font text-white">
+
+                  {{ if review_rate }}
+                  <div class="bottombox">
+
+
+                  <div class="reviewbox red">Score: {{ review_rate}}</div>
+                  {{ endif }}
+                  {{ if review_developer }}
+                  <div class="reviewbox">Developer: {{ review_developer}}</div>
+                  {{ endif }}
+                  {{ if review_platform }}
+                  <div class="reviewbox">Platform: {{ review_platform}}</div>
+                  {{ endif }}
+                  {{ if review_release }}
+                  <div class="reviewbox">Release Date: {{ review_release}}</div>
+                </div>
+                  {{ endif }}
+                  </span>
+          </div>
+        </div><!--end of row-->
+      </div><!--end of container-->
+  </header>
+
+  <section class="article-single">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+          <div class="article-body">
+            <p class="lead">
+              {{ summary }}
+
+            </p>
+
+            {{ content }}
+
+            {{ blog_replicator }}
+
+                {{ if type == "content_set" }}
+
+                  <div class="text">
+                    {{ text|markdown }}
+                  </div>
+
+                {{ elseif type == "quote_set" }}
+
+                  <blockquote>{{ quote }}    <br /> <span>&mdash; {{ cite }}</span></blockquote>
+
+
+                {{ elseif type == "video_set" }}
+
+                        <iframe  width="750" height="422"  src="{{ text }}?rel=0&amp;controls=0&amp;showinfo=0" border="0"   allowfullscreen></iframe>
+                {{ elseif type == "image_set" }}
+
+                  <figure class=" post-image">
+
+              <img class="background-image" src="{{ transform src="{{ photo }}"width="750" height="420"  action="smart" alt="{{title}}" quality="100" }} " /></li>
+
+                    <figcaption>{{ caption }}</figcaption>
+                  </figure>
+
+                {{ endif }}
+
+              {{ /blog_replicator }}
+
+          {{ if categories }}<span>Filed in: <span class="meta"><a href="#">{{ categories_url_list }}</a></span></span>  \  {{ endif }}
+          {{ if tags }}<span>Tagged in: <span class="meta"><a href="#">{{ tags_url_list }}</a></span></span>{{ endif }}
+          </div><!--end of article body-->
+        </div>
+      </div><!--end of row-->
+
+
+    </div><!--end of container-->
+
+
+  </section>
+</div>

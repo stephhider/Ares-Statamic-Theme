@@ -1,0 +1,67 @@
+
+
+<section class="no-pad-bottom  projects-gallery">
+    <div class="col-sm-12 text-center">
+      <h1>Latest News &amp; Reviews</h1>
+    </div>
+    <div class="projects-wrapper clearfix">
+      <div class="projects-container">
+        {{ entries:listing  folder="blog" paginate="yes" show_future="false" show_past="true" limit="9" sort_dir="desc" }}
+
+        <div class="col-md-4 col-sm-12 col-xs-12 no-pad blogroll">
+
+              <div class="blog-snippet-1">
+                <a href="{{ url }}">
+
+
+                 {{ if gallery }}
+
+                          <div class="image-slider image-gallery">
+                            <ul class="slides">
+
+                              {{ gallery limit="80" }}
+                                <li><img class="background-image" src="{{ transform src="{{ photo }}"width="810" height="350"  action="smart" alt="{{title}}" quality="100" }} " /></li>
+
+                                {{ /gallery }}
+                              </ul>
+                            </div>
+
+
+
+                {{ else}}
+                  <img src="{{ transform src="{{ main_img }}" width="810" height="350"  action="smart" alt="{{title}}" quality="100" }} " />
+                {{ endif }}
+                </a>
+                <a href="{{ url }}"><h2>{{ title }}</h2></a>
+                <span class="sub alt-font">Published on {{ date }}</span>
+                <p>
+              {{ content|truncate:150|widont }}
+                </p>
+                <a href="{{ url }}" class="link-text">Read More</a>
+              </div>
+          </div><!--end of individual project-->
+
+          {{ /entries:listing }}
+        </div><!--end of container-->
+        <div class="container">
+
+        <div class="text-center">
+        {{ entries:pagination folder="blog" limit="10" }}
+        {{ if next_page || previous_page }}
+          <div class=" ">
+          <ul class="pagination ">
+            {{ if next_page }}
+              <li class="prev col-xs-12 col-md-6 columns"><a href="{{ next_page }}" class="btn btn-primary btn-filled">Older Posts</a></li>
+            {{ endif }}
+            {{ if previous_page }}
+              <li class="next col-xs-12 col-md-6 columns omega right previousright"><a href="{{ previous_page }}" class="btn btn-primary btn-filled"class="button newer">Newer Posts</a></li>
+            {{ endif }}
+            </ul>
+          </div>
+        {{ endif }}
+      {{ /entries:pagination }}
+      </div>
+
+    </div>
+    </div><!--end of wrapper-->
+</section><!--end of blogarea-->

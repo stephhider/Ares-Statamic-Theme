@@ -1,0 +1,39 @@
+
+<div class="main-container">
+  <header class="title">
+      <div class="background-image-holder parallax-background">
+      {{ get_content from="/globals" show_drafts="yes" }}
+      <img class="background-image" src="{{ transform src="{{ header_img }}"width="1920" height="882"  action="smart" alt="{{ title }}" quality="100" }} " />
+      {{ /get_content }}
+      </div>
+
+      <div class="container align-bottom">
+        <div class="row">
+          <div class="col-xs-12">
+            {{ if segment_2 == "categories" }}
+            <h1 class="text-white">Category &ndash; {{ taxonomy_slug|deslugify|title }}{{ if get:page > 0 }} &ndash; Page {{ get:page }}{{ endif }}</h1>
+            {{ endif }}
+            {{ if segment_2 == "tags" }}
+            <h1 class="text-white">Tag &ndash; {{ taxonomy_slug|deslugify|title }}{{ if get:page > 0 }} &ndash; Page {{ get:page }}{{ endif }}</h1>
+            {{ endif }}
+          </div>
+        </div><!--end of row-->
+      </div><!--end of container-->
+  </header>
+
+
+  <section class="blog-list-3 bg-white">
+
+				<div class="blog-snippet-3">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+				            {{ theme:partial src="_article" fold={blog} lim="5" tax="yes" }}
+							</div>
+						</div><!--end of row-->
+					</div><!--end of container-->
+				</div><!--end of blog-snippet-->
+
+
+  </section>
+</div>

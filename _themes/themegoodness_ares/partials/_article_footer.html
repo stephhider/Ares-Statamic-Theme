@@ -1,0 +1,139 @@
+<div id="tabs" class="tabs">
+    <nav>
+      <ul>
+        <li><a href="#section-1" class="icon-share"><span>Share</span></a></li>
+        <li><a href="#section-2" class="icon-author"><span>Author</span></a></li>
+        <li><a href="#section-3" class="icon-comment"><span>Comment</span></a></li>
+        <li><a href="#section-4" class="icon-tags"><span>Categories/Tags</span></a></li>
+        <li><a href="#section-5" class="icon-extra"><span>Extra</span></a></li>
+
+      </ul>
+    </nav>
+    <div class="content container">
+      <section id="section-1">
+          <div class="container">
+            <div class="">
+              <div class="sharing-is-caring text-center clearfix">
+                  <div class="social-profiles text-center">
+
+                    <div class="col-md-4"><div class="socialbox red "><a href="http://www.facebook.com/sharer.php?u={{_site_url}}{{url}}" target="_blank"><i class="icon social_facebook"></i></a></div></div>
+                    <div class="col-md-4"><div class="socialbox red "><a href="https://twitter.com/intent/tweet?source=webclient&text={{ title }}%20{{ title }}%20 {{_site_url}}{{url}} %20 " target="_blank" ><i class="icon social_twitter"></i></a></div></div>
+                    <div class="col-md-4"><div class="socialbox red "><a href="https://plus.google.com/share?url={{_site_url}}{{url}}" target="_blank"><i class="icon social_googleplus"></i></a></div></div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      <section id="section-2">
+        <div class="author-details">
+          {{ if author|not_empty }}
+          {{ member:profile member="{author}" }}
+          <img class="background-image" src="{{ transform src="{{ avatar_img }}"width="100" height="100"  action="smart" alt="{{author}}" quality="100" }} " />
+          <p class="article__author">Posted by: {{ first_name }} {{ last_name }} {{ biography }}</p>
+
+          <ul class="social-icons">
+          <li>
+            <a href="{{ twitter_author }}">
+              <i class="icon social_twitter"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="{{ facebook_author }}">
+              <i class="icon social_facebook"></i>
+            </a>
+          </li>
+          {{ /member:profile }}
+          {{ endif }}
+
+        </ul>
+        </div>
+      </section>
+      <section id="section-3">
+
+        {{ get_content from="/globals" show_drafts="yes" }}
+          {{ if disqus }}
+          <div class="comments">
+            <h3 class="text-center">Leave Your Comments</h3>
+            {{ disqus:comments account="{{ disqus }}" }}
+          </div>
+          {{ endif }}
+          {{ /get_content }}
+      </section>
+      <section id="section-4">
+
+              {{ taxonomy:listing folder="blog" type="categories" sort_by="results" sort_dir="desc" }}
+        {{ if first }}
+          <div class="uk-panel uk-panel-box blog-categories side-block twocolumn col-md-6 {{ switch between="odd|even" }}">
+                <h3 class="uk-panel-title">Categories</h3>
+            <ul class="uk-nav uk-nav-side">
+              {{ endif }}
+              <li>
+                <a href="{{ url }}">{{ name }}</a>
+              </li>
+              {{ if last }}
+            </ul>
+          </div>
+        {{ endif }}
+      {{ /taxonomy:listing }}
+
+
+
+      {{ taxonomy:listing folder="blog" type="tags" sort_by="results" sort_dir="desc" }}
+        {{ if first }}
+          <div class="uk-panel uk-panel-box blog-categories twocolumn col-md-6 side-block {{ switch between="odd|even" }}">
+                <h3 class="uk-panel-title">Tags</h3>
+            <ul class="uk-nav uk-nav-side">
+              {{ endif }}
+              <li>
+                <a href="{{ url }}">{{ name }}</a>
+              </li>
+              {{ if last }}
+            </ul>
+          </div>
+        {{ endif }}
+      {{ /taxonomy:listing }}
+
+      </section>
+      <section id="section-5" class="row">
+        {{ get_content from="/globals" show_drafts="yes" }}
+          {{ if callouts }}
+        <ul class="bloglinks twocolumn col-md-8">
+          {{ else }}
+          <ul class="bloglinks twocolumn col-md-12">
+          {{ endif }}
+        {{ /get_content }}
+          {{ get_content from="/globals" show_drafts="yes" }}
+          {{ blogroll limit="30" }}
+          <li>
+            <a href="{{ url }}">{{ linktext }}</a>
+          </li>
+
+          {{ /blogroll}}
+          {{ /get_content }}
+        </ul>
+
+        <div class="col-md-4">
+          {{ get_content from="/globals" show_drafts="yes" }}
+
+              {{ if callouts }}
+              {{ callouts limit="1" }}
+              <div class="uk-panel uk-panel-box">
+
+              	 <div class="calloutimage"> <img src="{{ photo }}" /></div>
+                	<div class="panelz">
+                   <h3 class="uk-panel-title"> {{ headline }}</h3>
+                	 <p> {{ caption }} </p>
+                  </div>
+              </div>
+              {{ /callouts }}
+              {{ endif }}
+
+      {{ /get_content }}
+        </div>
+      </section>
+
+
+
+    </div><!-- /content -->
+  </div><!-- /tabs -->

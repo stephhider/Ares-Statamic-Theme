@@ -1,0 +1,29 @@
+
+<div class="nav-container">
+      <nav class="top-bar overlay-bar">
+        <div class="container">
+          <div class="row nav-menu">
+            {{ get_content from="/globals" show_drafts="yes" }}
+            <div class=" thelogo ">
+            <a href="/"> <img class="col-sm-5 col-md-5 columns logo logo-light col-xs-12" src="{{  logo_img_light }}" />  <h1 class="col-sm-5 col-md-4 columns logo logo-light logotext">{{  logo_text }}</h1></a>
+            <a href="/">   <img class="col-sm-5 col-md-5 columns logo logo-dark col-xs-12" src="{{  logo_img_dark }}" />   <h1 class="col-sm-5 col-md-4 columns logo logo-dark logotext">{{  logo_text }}</h1></a>
+            </div>
+            {{ /get_content }}
+
+            <div class="col-sm-8 col-md-9 col-xs-12 columns text-right">
+              <ul class="menu">
+
+                {{ nav from="/" max_depth="2" }}
+                <li >  <a href="{{ url }}"{{ if is_current }} class="current"{{ endif }}>{{ title }}</a>
+
+                </li>
+                {{ /nav }}
+              </ul>
+            </div>
+          <div class="mobile-toggle">
+            <i class="icon icon_menu"></i>
+          </div>
+
+        </div><!--end of container-->
+      </nav>
+ </div><!--end of nav-container-->

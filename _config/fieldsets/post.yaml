@@ -1,0 +1,168 @@
+include: meta                  # include the meta fields
+hide: true
+
+fields:
+  title:
+    instructions: "Enter the main title here."
+
+  main_section:
+    type: section
+    display: Main Content
+    instructions: "Enter your main content here."
+
+  author:
+    display: Author
+    type: users
+
+  status:
+    display: Status
+    type: status
+
+  featured:
+    display: Featured
+    type: checkbox
+    instructions: "Select if you would like this to be featured."
+    options:
+      not_featured: "No"
+      is_featured: "Yes"
+
+  homeslider:
+    display: Slider
+    type: checkbox
+    instructions: "Select if you would like this to be on the homepage slider."
+    options:
+      not_slider: "No"
+      is_slider: "Yes"
+
+  categories:
+    display: Categories
+    type: suggest
+    create: true
+    max_items: 3
+    multiple: true
+    instructions:
+      below: "Create or select an existing category (maximum 3)."
+    taxonomy:
+      folder: blog #make sure you rename this to the folder name of your blog
+      type: categories
+
+  tags:
+    display: Tags
+    type: suggest
+    create: true
+    max_items: 3
+    multiple: true
+    instructions:
+      below: "Create or select an existing tag (maximum 3)."
+    taxonomy:
+      folder: blog #make sure you rename this to the folder name of your blog
+      type: tags
+
+  main_img:
+    display: Main Image
+    type: file
+    destination: assets/img/blog  #make sure the folder exists and is writable
+    instructions:
+      below: "Add the main image here, this will also display as a thumbnail on the listing page and your homepage slider image so as big as possible ideally 1800 wide."
+
+  gallery:
+      display: Gallery
+      type: grid
+      starting_rows: 1
+      min_rows: 1
+      fields:
+        photo:
+          type: file
+          display: Photo
+          destination: assets/img/blog/
+          show_thumbnail: true
+      instructions:
+            below: "A series of images to be displayed on the blog overview page instead of one thumbnail."
+
+
+  review_developer:
+    display: Review Developer
+    required: false
+    type: text
+    instructions:
+      below: "For review information: the developer of the title."
+
+  review_release:
+    display: Review Release Date
+    required: false
+    type: date
+    instructions:
+      below: "For review information: the release of the title."
+
+  review_platform:
+    display: Review Platform
+    required: false
+    type: text
+    instructions:
+      below: "For review information: the platform of the title."
+
+  review_rate:
+    display: Review Release Rating
+    required: false
+    type: text
+    instructions:
+      below: "For review information: the rating of the title."
+
+  summary:
+    display: Summary
+    required: false
+    type: text
+    instructions:
+      below: "Add a short summary here."
+
+  content:
+    display: Main Content
+    type: markitup
+    instructions:
+      below: "Add the main content here."
+
+
+  blog_replicator:
+    type: replicator
+    instructions: |
+      Replicate a new set for each piece of content you need.
+
+    sets:
+
+      content_set:
+        display: Content
+        fields:
+          text:
+            display: Text
+            type: markitup
+
+      video_set:
+        display: Video
+        fields:
+          text:
+            display: Video
+            type: textarea
+            instructions: Embed code copy and paste the text after the src="    and before the ? and or "  ie //www.youtube.com/embed/xHwb3A2NLVE.
+
+      quote_set:
+        display: Quote
+        fields:
+          quote:
+            type: textarea
+            height: 40
+            instructions: What was said?
+          cite:
+            type: text
+            instructions: Who said it?
+
+
+      image_set:
+        display: Solo Image
+        fields:
+          photo:
+            type: file
+            allowed: [png, jpg, jpeg, gif]
+            destination: assets/img/
+          caption:
+            type: text
+            instructions: Describe the photo
