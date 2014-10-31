@@ -8,7 +8,7 @@ This theme is based off of the baseline <a href="https://github.com/statamicthem
 
 The demo can be found at <a href="http://ares.themegoodness.com/"> here </a>
 
-The global addon needs to be installed to take advantage of this theme please follow the directions at the link above on how to enable this add on. 
+The global addon needs to be installed to take advantage of this theme please follow the directions at the link above on how to enable this add on. To take advantage of the comments you will need to install [https://github.com/statamic/Plugin-Disqus] (disqus).
 
 Please copy over the files found in the folders: <br />
 _config/fieldsets <br />
