@@ -1,6 +1,6 @@
 Ares-Statamic-Theme
 ===================
-Not officially released --- have an IE grid issue to resolve
+*Not officially released --- have an IE grid issue to resolve*
 Statamic Theme for Gaming Bloggers
 
 
