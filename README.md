@@ -4,7 +4,7 @@ Ares-Statamic-Theme
 Statamic Theme for Gaming Bloggers
 
 
-This theme is based off of the baseline <a href="https://github.com/statamicthemes/statarkers-theme">theme</a> put together by Garth Redfern. It uses the <a href="http://getbootstrap.com"> Bootstrap Framework. The theme requires a Statamic license which is purchase-able from their <a href="http://www.statamic.com/">website</a>. Special thanks to Jason Varga for the <a href="https://github.com/pixelfear/Statamic-Globals">global addon</a>. It was designed by <a href="http://stephaniehider.com">Stephanie Hider</a> for a gaming buddy who tinkers, not in the good way, with his [http://aldshotfirst.com] (gaming blog too much) . =D.
+This theme is based off of the baseline <a href="https://github.com/statamicthemes/statarkers-theme">theme</a> put together by Garth Redfern. It uses the <a href="http://getbootstrap.com"> Bootstrap Framework</a>. The theme requires a Statamic license which is purchase-able from their <a href="http://www.statamic.com/">website</a>. Special thanks to Jason Varga for the <a href="https://github.com/pixelfear/Statamic-Globals">global addon</a>. It was designed by <a href="http://stephaniehider.com">Stephanie Hider</a> for a gaming buddy who tinkers, not in the good way, with his (http://aldshotfirst.com) [gaming blog too much] . =D.
 
 The demo can be found at <a href="http://ares.themegoodness.com/"> here </a>
 
