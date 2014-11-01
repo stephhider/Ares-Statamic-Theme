@@ -12,6 +12,7 @@ The global addon needs to be installed to take advantage of this theme please fo
 
 Please copy over the files found in the folders: <br />
 _config/fieldsets <br />
+_config/bundles/member/fields <br />
 _content/<br />
 _themes/<br />
 assets
