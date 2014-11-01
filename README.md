@@ -18,8 +18,8 @@ assets
 
 In the _config/settings.yaml you will want to change the theme to "themegoodness_ares" also please make sure your site url is correct and active for the author fieldset to work properly.
 
-If the global addon is installed correctly in your admin you should see the global tab here you can modify the theme's logo for the header footer, swap out the red colors, add your tracking codes and input your social profile links. There is also a section for the default sidebar items that allow you to turn on and off the sub nav, events and add callouts.
+If the global addon is installed correctly in your admin you should see the global tab here you can modify the theme's logo for the header footer, swap out the red colors, add your tracking codes and input your social profile links. There is also a section for the extra items that show up in the footer of articlee ( blog roll and callout).
 
-You should see content areas to populate for blog, our team, events and programs. You can delete any of these that you don't wish to use in the content folder. 
+You should see content areas to populate for the blog. 
 
 And of course if you know your way around Statamic you can easily swap, delete and change things as you need. Please send me a shout if you need any help or find any bugs or issues.
