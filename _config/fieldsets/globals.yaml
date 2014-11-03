@@ -38,12 +38,17 @@ fields:
     instructions:
       below: "Place a hex color here to easily swap out the red color for the text links. Do not place the # part of the hex color. "
   darkred:
-    display: Switch out link dark red color
+    display: Switch out dark red color
     type: text
     instructions:
       below: "Place a hex color here to easily swap out dark red colors. Do not place the # part of the hex color. "
   lightred:
-    display: Switch out link light red color
+    display: Switch out light red color
+    type: text
+    instructions:
+      below: "Place a hex color here to easily swap out light red colors. Do not place the # part of the hex color. "
+  medred:
+    display: Switch out medium red color
     type: text
     instructions:
       below: "Place a hex color here to easily swap out light red colors. Do not place the # part of the hex color. "

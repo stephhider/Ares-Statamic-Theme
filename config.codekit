@@ -4448,6 +4448,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/_themes\/themegoodness_ares\/css\/iefix.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_themes\/themegoodness_ares\/css\/iefix.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/_themes\/themegoodness_ares\/css\/themegoodness_ares.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -4912,15 +4921,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/_themes\/themegoodness_ares\/partials\/_article_author.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_themes\/themegoodness_ares\/partials\/_article_author.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/_themes\/themegoodness_ares\/partials\/_article_footer.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -4935,15 +4935,6 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_themes\/themegoodness_ares\/partials\/_contact_form.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/_themes\/themegoodness_ares\/partials\/_doc_head.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_themes\/themegoodness_ares\/partials\/_doc_head.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
