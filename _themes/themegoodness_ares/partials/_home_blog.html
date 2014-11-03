@@ -43,25 +43,24 @@
 
           {{ /entries:listing }}
         </div><!--end of container-->
-        <div class="container">
+        
+    </div><!--end of wrapper-->
+    <div class="container clearfix">
 
-        <div class="text-center">
         {{ entries:pagination folder="blog" limit="10" }}
         {{ if next_page || previous_page }}
-          <div class=" ">
-          <ul class="pagination ">
+      
+          <ul class="pagination text-center row">
             {{ if next_page }}
-              <li class="prev col-xs-12 col-md-6 columns"><a href="{{ next_page }}" class="btn btn-primary btn-filled">Older Posts</a></li>
+              <li class="prev col-xs-12 col-md-12 columns text-center"><a href="{{ next_page }}" class="text-center btn btn-primary btn-filled">Older Posts</a></li>
             {{ endif }}
             {{ if previous_page }}
-              <li class="next col-xs-12 col-md-6 columns omega right previousright"><a href="{{ previous_page }}" class="btn btn-primary btn-filled"class="button newer">Newer Posts</a></li>
+              <li class="next col-xs-12 col-md-12 columns text-center omega right text-center previousright"><a href="{{ previous_page }}" class="btn btn-primary btn-filled"class="button newer">Newer Posts</a></li>
             {{ endif }}
             </ul>
-          </div>
+         
         {{ endif }}
       {{ /entries:pagination }}
-      </div>
-
+   
     </div>
-    </div><!--end of wrapper-->
 </section><!--end of blogarea-->

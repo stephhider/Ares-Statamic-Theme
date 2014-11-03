@@ -9640,3 +9640,14 @@ blockquote {
       line-height: 20px; } }
 .margin-100 {
   margin-top: 200px !important; }
+
+.pagination {
+  margin: 30px auto;
+  width: 100%; }
+
+.pagination > li > a, .pagination > li > span {
+  position: relative;
+  float: none !important; }
+
+.prev, .next {
+  margin: 0px auto; }
