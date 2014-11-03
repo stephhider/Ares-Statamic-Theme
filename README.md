@@ -1,6 +1,6 @@
 Ares-Statamic-Theme
 ===================
-*Not officially released --- have an IE grid issue to resolve*
+
 Statamic Theme for Gaming Bloggers
 
 
@@ -15,7 +15,7 @@ _config/fieldsets <br />
 _config/bundles/member/fields <br />
 _content/<br />
 _themes/<br />
-assets
+assets (not neccessary just has demo images)
 
 In the _config/settings.yaml you will want to change the theme to "themegoodness_ares" also please make sure your site url is correct and active for the author fieldset to work properly.
 
